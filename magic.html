@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到超能力生成器</title>
+</head>
+<body>
+    <div id="baseBox"> 
+        <div class="title">超能力生成器</div>   
+        <div class="text">你的超能力是</div>
+        <div class="textBox" id="power">(点击生成)</div>
+        <div class="text" >但是</div>
+        <div class="textBox" id="sideEffect">(点击生成)</div>
+        <button class="button" id="button" onclick="generate()">生成</button>
+    </div>
+</body>
+<style>
+    #baseBox{
+        margin-top: 10%;
+        margin-left: 40% ;
+        
+        width: 20%;
+        
+        height: 40%;
+        
+        background-color: whitesmoke;
+
+        border-style: solid;
+        border-color: black;
+        border-radius: 3px;
+        
+        box-shadow:0 0 10px rgba(0,0,0,0.5);
+
+    }
+
+    .textBox{
+        margin-left: 10%;
+        width: 80%;
+
+        background-color: white;
+
+        color:black;
+
+        border-style: solid;
+        border-color: gray;
+
+        box-shadow:0 0 3px rgba(0,0,0,0.5);
+    }
+
+    .text{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 10%;
+        width: 80%;
+
+        color:black;
+
+    }
+
+    .button{
+        border: none;
+        text-align: center;
+        
+        margin-left: 35%;
+        width: 30%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        background-color: rgba(0,0,255,0.5);
+        color: whitesmoke;
+        box-shadow: 0 0 3px rgba(0,0,0,0.5);
+
+        border-radius: 3px;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+
+        font-size:xx-large;
+        margin-bottom: 30px;
+
+    }
+</style>
+<script>
+    let powers = [
+        "可以暂停时间",
+        "可以吸取面前人类的寿命",
+        "可以穿越时间",
+        "可以使时间倒流",
+        "可以加速时间流动",
+        "可以飞行",
+        "可以穿透墙壁",
+        "可以使一件物体闪闪发光",
+        "可以吸引周围的金属物体",
+        "可以进入别人的梦境",
+    ];
+    let sideEffects = [
+        "使用后会变性",
+        "会同时看到不可名状的存在",
+        "会变成智障",
+        "身边会一直下雨",
+        "使用后会下雨",
+        "会无法控制身体",
+        "会浑身散发无法祛除的臭味",
+        "会永远感到饥饿",
+        "会被一只蜗牛追杀",
+        "使用时血液会不断蒸发",
+        "使用时会引发地震",
+        "会随机指定一个陌生人拥有相同能力",
+        "不能上网",
+        "会失去语言能力",
+        "会失去听觉",
+        "会失去嗅觉",
+        "会失去味觉",
+        "会双目失明",
+        "会变成色盲",
+        "用了就会死亡",
+        "会失去生育能力",
+        "考试永远不及格",
+        "自己会获得绝症",
+        "会永远找不到爱人",
+        "使用时要全程保持裸体",
+        "使用时要全程保持汪汪大叫",
+        "使用后会感到饥饿",
+    ]
+    function generate(){
+        // 你的代码如下：
+        let button=document.getElementById("button");
+        let power=document.getElementById("power");
+        let sideEffect=document.getElementById("sideEffect");
+        let powerId=Math.floor(Math.random()*powers.length);
+        let sideEffectId=Math.floor(Math.random()*sideEffects.length);
+        power.innerHTML=powers[powerId];
+        sideEffect.innerHTML=sideEffects[sideEffectId];
+        button.innerHTML="再次生成";
+    }
+</script>
+</html>
